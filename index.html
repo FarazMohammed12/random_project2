@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SportZone</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f4f6f8;
+      color: #222;
+    }
+
+    /* Navbar */
+    nav {
+      background: #071a2b;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 8%;
+    }
+
+    .logo {
+      font-size: 25px;
+      font-weight: bold;
+      color: #22c55e;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 25px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      color: #22c55e;
+    }
+
+    /* Hero */
+    .hero {
+      min-height: 500px;
+      background: linear-gradient(
+          rgba(7, 26, 43, 0.85),
+          rgba(7, 26, 43, 0.85)
+        ),
+        linear-gradient(135deg, #0f766e, #071a2b);
+      display: flex;
+      align-items: center;
+      padding: 60px 8%;
+      color: white;
+    }
+
+    .hero-content {
+      max-width: 650px;
+    }
+
+    .hero h1 {
+      font-size: 60px;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 span {
+      color: #22c55e;
+    }
+
+    .hero p {
+      font-size: 19px;
+      line-height: 1.6;
+      margin-bottom: 30px;
+      color: #dbe4ea;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #22c55e;
+      color: white;
+      padding: 13px 25px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .btn:hover {
+      background: #16a34a;
+    }
+
+    /* Sections */
+    section {
+      padding: 60px 8%;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+
+    .section-title h2 {
+      font-size: 35px;
+      color: #071a2b;
+    }
+
+    .section-title p {
+      margin-top: 10px;
+      color: #666;
+    }
+
+    /* Sports */
+    .sports {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .sport-card {
+      background: white;
+      padding: 30px 20px;
+      text-align: center;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      transition: 0.3s;
+    }
+
+    .sport-card:hover {
+      transform: translateY(-8px);
+    }
+
+    .sport-icon {
+      font-size: 45px;
+      margin-bottom: 15px;
+    }
+
+    .sport-card h3 {
+      color: #071a2b;
+      margin-bottom: 8px;
+    }
+
+    .sport-card p {
+      color: #666;
+    }
+
+    /* Matches */
+    .matches {
+      background: #071a2b;
+      color: white;
+    }
+
+    .matches .section-title h2 {
+      color: white;
+    }
+
+    .matches .section-title p {
+      color: #b8c4ce;
+    }
+
+    .match-list {
+      max-width: 850px;
+      margin: auto;
+    }
+
+    .match {
+      background: #102c43;
+      margin-bottom: 15px;
+      padding: 20px;
+      border-radius: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .team {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .vs {
+      color: #22c55e;
+      font-weight: bold;
+    }
+
+    .date {
+      color: #b8c4ce;
+      font-size: 14px;
+    }
+
+    /* Footer */
+    footer {
+      background: #04111d;
+      color: #aaa;
+      text-align: center;
+      padding: 25px;
+    }
+
+    footer span {
+      color: #22c55e;
+    }
+
+    /* Responsive */
+    @media (max-width: 800px) {
+      nav ul {
+        display: none;
+      }
+
+      .hero h1 {
+        font-size: 42px;
+      }
+
+      .sports {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 500px) {
+      .sports {
+        grid-template-columns: 1fr;
+      }
+
+      .match {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="logo">⚡ SportZone</div>
+
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#sports">Sports</a></li>
+      <li><a href="#matches">Matches</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1>Feel the <span>Energy</span> of Sports</h1>
+
+      <p>
+        Stay connected with your favorite sports, discover upcoming
+        matches, and experience the excitement of the game.
+      </p>
+
+      <a href="#matches" class="btn">View Matches</a>
+    </div>
+  </section>
+
+
+  <!-- Sports Section -->
+  <section id="sports">
+    <div class="section-title">
+      <h2>Popular Sports</h2>
+      <p>Explore your favorite games</p>
+    </div>
+
+    <div class="sports">
+
+      <div class="sport-card">
+        <div class="sport-icon">⚽</div>
+        <h3>Football</h3>
+        <p>Follow the world's most popular sport.</p>
+      </div>
+
+      <div class="sport-card">
+        <div class="sport-icon">🏀</div>
+        <h3>Basketball</h3>
+        <p>Fast-paced action and incredible shots.</p>
+      </div>
+
+      <div class="sport-card">
+        <div class="sport-icon">🏏</div>
+        <h3>Cricket</h3>
+        <p>Enjoy every boundary, wicket and six.</p>
+      </div>
+
+      <div class="sport-card">
+        <div class="sport-icon">🎾</div>
+        <h3>Tennis</h3>
+        <p>Experience the intensity of every rally.</p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- Matches Section -->
+  <section class="matches" id="matches">
+
+    <div class="section-title">
+      <h2>Upcoming Matches</h2>
+      <p>Don't miss the action</p>
+    </div>
+
+    <div class="match-list">
+
+      <div class="match">
+        <div class="team">Lions FC</div>
+        <div class="vs">VS</div>
+        <div class="team">United FC</div>
+        <div class="date">Today · 7:30 PM</div>
+      </div>
+
+      <div class="match">
+        <div class="team">City Warriors</div>
+        <div class="vs">VS</div>
+        <div class="team">Super Kings</div>
+        <div class="date">Tomorrow · 6:00 PM</div>
+      </div>
+
+      <div class="match">
+        <div class="team">Red Hawks</div>
+        <div class="vs">VS</div>
+        <div class="team">Blue Stars</div>
+        <div class="date">Friday · 8:00 PM</div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="section-title">
+      <h2>Stay Connected</h2>
+      <p>Get the latest sports updates and match information.</p>
+      <br>
+      <a href="mailto:info@sportzone.com" class="btn">Contact Us</a>
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 <span>SportZone</span>. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
